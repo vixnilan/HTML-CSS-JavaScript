@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function okno_zamknij_wlodarczyk()
+			{
+			window.close()
+			}
+		</script>
+	</head>
+	<body>
+		<img src="obraz1.gif"/>
+		<img src="obraz2.gif" width=250 height=250/>
+		<textarea rows=24 cols=160>
+1. W 1995 roku
+2. Nie musi zostać skompilowany do kodu maszynowego, aby można było zobaczyć efekty jego działania.
+3. Wystarczy nam do tego przeglądarka internetowa, która ten język obsługuje – czyli w zasadzie każda z liczących się na rynku aplikacji
+4. Ze względów bezpieczeństwa JavaScript ma znacznie ograniczone uprawnienia dostępu do zasobów komputera, przy użyciu którego przeglądana jest dana strona
+5. JavaScriptu należy dobrze poznać tak zwany obiektowy model dokumentu HTML – czyli DOM. Określa on sposoby dostępu oraz zmiany zawartości i parametrów poszczególnych elementów struktury strony.
+
+b)Przepisz linie kody pod nimi wytłumaczenie:
+<input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')">
+……………………………wytłumaczenie……………………………………………………………………………….
+window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");
+……………………………wytłumaczenie……………………………………………………………………………….
+toolbar=no - wartość yes lub no (1 lub 0): pokazuje lub ukrywa standardowy pasek narzędzi
+directories=no, - wartość yes lub no (1 lub 0): pokazuje lub ukrywa przyciski katalogów
+menubar=no, - wartość yes lub no (1 lub 0): pokazuje lub ukrywa menu przeglądarki
+height=280, - wartość w pixelach (1 lub 0): ustawia wysokość okna
+width=160, - wartość w pixelach (1 lub 0): ustawia szerokość okna
+top=200, - wartość w pixelach : ustawia położenie okna względem góry ekranu
+left=200, - wartość w pixelach : ustawia położenie okna względem lewej strony ekranu
+
+
+window.close()
+……………………………wytłumaczenie……………………………………………………………………………….
+		</textarea>
+		<input type="button" value="zamknij okno" onclick="okno_zamknij_wlodarczyk()"/>
+	</body>
+</html>
+
