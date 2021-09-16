@@ -1,0 +1,33 @@
+<html>
+<body>
+<textarea rows="28" cols="110">
+<html>
+<body>
+<div style="color:green;font-size:57px;">
+<script language="JavaScript">
+var d1_wlod=prompt("dzień 1=","");
+var d2_wlod=prompt("dzień 2=","");
+var suma;
+if (d2_wlod > d1_wlod)
+{
+suma=d2_wlod * 24 * 60 * 60 - d1_wlod * 24 * 60 * 60;
+document.write("Od dnia="+d1_wlod+" do dnia="+d2_wlod+" jest roznica czasu: "+suma+" sekund " + "<br>");
+}
+if (d1_wlod > d2_wlod)
+{
+suma=d1_wlod * 24 * 60 * 60 - d2_wlod * 24 * 60 * 60;
+document.write("Od dnia="+d1_wlod+" do dnia="+d2_wlod+" jest roznica czasu: "+suma+" sekund " + "<br>");
+}
+if (d2_wlod == d1_wlod)
+{
+suma=0;
+document.write("Nie ma roznicy czasu");
+}
+
+</script>
+</div>
+</body>
+</html>
+</textarea>
+</html>
+</body>
