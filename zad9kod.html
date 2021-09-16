@@ -11,41 +11,30 @@ var g1_wlod=prompt("godzina 1=","");
 var g2_wlod=prompt("godzina 2=","");
 var sumadni;
 var sumagodzin;
-if (d2_wlod > d1_wlod)
+if (d2_wlod >= d1_wlod && g1_wlod >= g2_wlod)
 {
-sumadni=d2_wlod * 24 * 60 * 60 - d1_wlod * 24 * 60 * 60;
-document.write("Od dnia="+d1_wlod+" do dnia="+d2_wlod+" jest roznica czasu: "+sumadni+" sekund " + "<br>");
+sumadni=(d2_wlod * 24 * 60 * 60 - d1_wlod * 24 * 60 * 60) - (g1_wlod * 60 * 60 - g2_wlod * 60 * 60);
+document.write("Od dnia="+d1_wlod+" i godziny "+g1_wlod+" do dnia="+d2_wlod+" i godziny "+g2_wlod+" jest roznica czasu: "+sumadni+" sekund " + "<br>");
 }
-if (d1_wlod > d2_wlod)
+if (d2_wlod >= d1_wlod && g1_wlod <= g2_wlod)
 {
-sumadni=d1_wlod * 24 * 60 * 60 - d2_wlod * 24 * 60 * 60;
-document.write("Od dnia="+d1_wlod+" do dnia="+d2_wlod+" jest roznica czasu: "+sumadni+" sekund " + "<br>");
+sumadni=(d2_wlod * 24 * 60 * 60 - d1_wlod * 24 * 60 * 60) - (g2_wlod * 60 * 60 - g1_wlod * 60 * 60);
+document.write("Od dnia="+d1_wlod+" i godziny "+g1_wlod+" do dnia="+d2_wlod+" i godziny "+g2_wlod+" jest roznica czasu: "+sumadni+" sekund " + "<br>");
 }
-if (d2_wlod == d1_wlod)
+if (d1_wlod >= d2_wlod && g1_wlod >= g2_wlod)
 {
-sumadni=0;
-document.write("Nie ma roznicy czasu w dniach");
+sumadni=(d1_wlod * 24 * 60 * 60 - d2_wlod * 24 * 60 * 60) - (g1_wlod * 60 * 60 - g2_wlod * 60 * 60);
+document.write("Od dnia="+d1_wlod+" i godziny "+g1_wlod+" do dnia="+d2_wlod+" i godziny "+g2_wlod+" jest roznica czasu: "+sumadni+" sekund " + "<br>");
 }
-
-if (g2_wlod > g1_wlod)
+if (d1_wlod >= d2_wlod && g1_wlod <= g2_wlod)
 {
-sumagodzin=g2_wlod * 60 * 60 - g1_wlod * 60 * 60;
-document.write("Od godziny="+g1_wlod+" do godziny="+g2_wlod+" jest roznica czasu: "+sumagodzin+" sekund " + "<br>");
+sumadni=(d1_wlod * 24 * 60 * 60 - d2_wlod * 24 * 60 * 60) - (g2_wlod * 60 * 60 - g1_wlod * 60 * 60);
+document.write("Od dnia="+d1_wlod+" i godziny "+g1_wlod+" do dnia="+d2_wlod+" i godziny "+g2_wlod+" jest roznica czasu: "+sumadni+" sekund " + "<br>");
 }
-if (g1_wlod > g2_wlod)
-{
-sumagodzin=g1_wlod * 60 * 60 - g2_wlod * 60 * 60;
-document.write("Od godziny="+g1_wlod+" do godziny="+g2_wlod+" jest roznica czasu: "+sumagodzin+" sekund " + "<br>");
-}
-if (g2_wlod == g1_wlod)
-{
-sumagodzin=0;
-document.write("Nie ma roznicy czasu w godzinach");
-}
-
 </script>
 </div>
 </body>
 </html>
+</textarea>
 </body>
 </html>
