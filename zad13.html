@@ -1,0 +1,19 @@
+<html>
+<body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+	var liczba1=prompt("liczba1=","");
+	var liczba2=prompt("liczba2=","");
+	var a=parseFloat(liczba1);
+	var b=parseFloat(liczba2);
+	var c1 = parseFloat(a**3);
+	var c2 = parseFloat(3*((a)**b)*(b));
+	var c3 = parseFloat(3*(a)*((b)**b));
+	var c4= parseFloat(b**3);
+	var finall= parseFloat(c1 + c2 + c3 + c4);
+	document.write("Wczytane liczbyㅤㅤㅤA:" +a+ "ㅤㅤㅤ" + "B:"+b+ "<br>");
+	document.write("(" + a + "+" +b+ ")^3=" +a + "^3 + 3*((" +a + ")^" + b +")*(" +b + ") + 3*(" + a + ")*((" +b+")^"+b+") + "+b+"^3 = " +c1+ " + "+c2+ " + "+c3+ " + "+c4+ " = " + finall);
+</script>
+</div>
+</body>
+</html>
