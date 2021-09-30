@@ -1,0 +1,23 @@
+<html>
+<body>
+<div style="color:red;font-size:60px;">
+<script language="JavaScript">
+	var noint=prompt("no=","");
+	var tint=prompt("t=","");
+	var T12int=prompt("T1/2=","");
+	
+	var no = parseFloat(noint);
+	var t = parseFloat(tint);
+	var T12 = parseFloat(T12int);
+	var lambda = parseFloat((Math.LN2)/(T12));
+	var n = parseFloat(no * Math.pow(Math.E, (lambda * -1) * t));
+	document.write("N0=" + no + "[sztuk]<br>");
+	document.write("t=" + t + "[lat]<br>");
+	document.write("T1/2=" + T12 + "[lat]<br>");
+	document.write("Lambda=" + lambda.toFixed(7) + "[1/rok]<br>");
+	document.write("N=" + n.toFixed(7) + "[sztuk]<br>");
+		//Tomasz Włodarczyk 2P
+</script>
+</div>
+</body>
+</html>
