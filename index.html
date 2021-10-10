@@ -10,7 +10,10 @@
          let s = today.getSeconds();
          m = checkTime(m);
          s = checkTime(s);
-         document.getElementById('timeDiv').innerHTML = h + ":" + m + ":" + s;
+         if(h < 10)
+	   document.getElementById('timeDiv').innerHTML = "0" + h + ":" + m + ":" + s;
+	 else
+	   document.getElementById('timeDiv').innerHTML = h + ":" + m + ":" + s;
          var doc = document.getElementById("body");
          if( h == 21 && m == 37){
          doc.style.backgroundImage="url(https://preview.redd.it/1cekwu1nn6761.png?width=960&crop=smart&auto=webp&s=81b30f4b0ca52cfe69d3b50d2290358496762185)";
