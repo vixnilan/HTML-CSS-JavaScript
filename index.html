@@ -1,228 +1,216 @@
 <html id="body">
-	<head>
-	<title>Interwencja</title>
-		<script src="https://kit.fontawesome.com/695bd2b40a.js" crossorigin="anonymous"></script>
-		<script language="JavaScript">
-		var searchboxValue, bigValue, mainDiv,mainDivKod, getBtnVal, i, j;
-		function startTime() {
-  const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('timeDiv').innerHTML = h + ":" + m + ":" + s;
-  var doc = document.getElementById("body");
-  if( h == 21 && m == 37){
-	doc.style.backgroundImage="url(https://preview.redd.it/1cekwu1nn6761.png?width=960&crop=smart&auto=webp&s=81b30f4b0ca52cfe69d3b50d2290358496762185)";
-	doc.style.backgroundColor = "rgba(0,0,0,0.1)";
-	}
-	else
-	{
-	doc.style.backgroundImage="url(https://cdnb.artstation.com/p/assets/images/images/014/665/033/original/yargon-kerman-webp-net-gifmaker-39.gif?1544919451)";
-    doc.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
-	}
-	
-  setTimeout(startTime, 1000);
-}
-
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-			function hideButtonSearch()
-			{
-				searchboxValue = document.getElementById("searchtxt");
-				
-				
-				bigValue = searchboxValue.value.toUpperCase();
-				mainDiv = document.getElementById("searchit");
-				getBtnVal = mainDiv.getElementsByTagName("input");
-				getHrVal = mainDiv.getElementsByTagName("hr");
-
-					for (i = 0; i < getBtnVal.length; i++) 
-					{
-						bigBtnVal = getBtnVal[i].value.toUpperCase();
-						if (bigBtnVal.indexOf(bigValue) > -1) 
-						{
-							getBtnVal[i].style.display = "block";
-							getHrVal[i].style.display = "block";
-						}
-						else
-						{
-							getBtnVal[i].style.display = "none";
-							getHrVal[i].style.display = "none";
-						}
-					}
-				
-				mainDiv = document.getElementById("searchitKod");
-				getBtnVal = mainDiv.getElementsByTagName("input");
-				getHrVal = mainDiv.getElementsByTagName("hr");
-				for (i = 0; i < getBtnVal.length; i++) 
-				{
-					bigBtnVal = getBtnVal[i].value.toUpperCase();
-					if (bigBtnVal.indexOf(bigValue) > -1) 
-					{
-						getBtnVal[i].style.display = "block";
-						getHrVal[i].style.display = "block";
-					}
-					else
-					{
-					
-						getBtnVal[i].style.display = "none";
-						getHrVal[i].style.display = "none";
-						
-					}
-					
-				
-				}
-				
-			}
-			function WinOpen_wlodarczyk()
-				{
-				window.open("obraz.html","okienko","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_1()
-				{
-				window.open("obrazy.html","okienka","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_3()
-				{
-				window.open("teoriazad3.html","zad 3","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_4()
-				{
-				window.open("zad4.html","zad 4","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_5()
-				{
-				window.open("zad5.html","zad 5","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_6()
-				{
-				window.open("zad6.html","zad 6","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_7()
-				{
-				window.open("zad7.html","zad 7","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_8()
-				{
-				window.open("zad8.html","zad 8","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_8kod()
-				{
-				window.open("zad8kod.html","zad 8 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_9()
-				{
-				window.open("zad9.html","zad 9","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_9kod()
-				{
-				window.open("zad9kod.html","zad 9- kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_10()
-				{
-				window.open("zad10.html","zad 10","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_10kod()
-				{
-				window.open("zad10kod.html","zad 10 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_11()
-				{
-				window.open("zad11.html","zad 11","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_11kod()
-				{
-				window.open("zad11kod.html","zad 11 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_12()
-				{
-				window.open("zad12.html","zad 12","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_12kod()
-				{
-				window.open("zad12kod.html","zad 12 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_13()
-				{
-				window.open("zad13.html","zad 13","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_13kod()
-				{
-				window.open("zad13kod.html","zad 13 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_14()
-				{
-				window.open("zad14.html","zad 14","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_14kod()
-				{
-				window.open("zad14kod.html","zad 14 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_15()
-				{
-				window.open("zad15.html","zad 15","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_15kod()
-				{
-				window.open("zad15kod.html","zad 15 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_16()
-				{
-				window.open("zad16.html","zad 16","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_17()
-				{
-				window.open("zad17.html","zad 17","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_17kod()
-				{
-				window.open("zad17kod.html","zad 17 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-			function WinOpen_wlodarczyk_18()
-				{
-				window.open("zad18.html","zad 18","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
-				}
-		</script>
-		<style>
-		 body
+   <head>
+      <title>Interwencja</title>
+      <script src="https://kit.fontawesome.com/695bd2b40a.js" crossorigin="anonymous"></script>
+      <script language="JavaScript">
+         var searchboxValue, bigValue, mainDiv,mainDivKod, getBtnVal, i, j;
+         function startTime() {
+         const today = new Date();
+         let h = today.getHours();
+         let m = today.getMinutes();
+         let s = today.getSeconds();
+         m = checkTime(m);
+         s = checkTime(s);
+         document.getElementById('timeDiv').innerHTML = h + ":" + m + ":" + s;
+         var doc = document.getElementById("body");
+         if( h == 21 && m == 37){
+         doc.style.backgroundImage="url(https://preview.redd.it/1cekwu1nn6761.png?width=960&crop=smart&auto=webp&s=81b30f4b0ca52cfe69d3b50d2290358496762185)";
+         doc.style.backgroundColor = "rgba(0,0,0,0.1)";
+         }
+         else
+         {
+         doc.style.backgroundImage="url(https://cdnb.artstation.com/p/assets/images/images/014/665/033/original/yargon-kerman-webp-net-gifmaker-39.gif?1544919451)";
+           doc.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+         }
+         setTimeout(startTime, 1000);
+         }
+         function checkTime(i) {
+         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+         return i;
+         }
+         function sleep(ms) {
+         return new Promise(resolve => setTimeout(resolve, ms));
+         }
+         	function hideButtonSearch()
+         	{
+         		searchboxValue = document.getElementById("searchtxt");
+         		bigValue = searchboxValue.value.toUpperCase();
+         		mainDiv = document.getElementById("searchit");
+         		getBtnVal = mainDiv.getElementsByTagName("input");
+         		getHrVal = mainDiv.getElementsByTagName("hr");
+         			for (i = 0; i < getBtnVal.length; i++) 
+         			{
+         				bigBtnVal = getBtnVal[i].value.toUpperCase();
+         				if (bigBtnVal.indexOf(bigValue) > -1) 
+         				{
+         					getBtnVal[i].style.display = "block";
+         					getHrVal[i].style.display = "block";
+         				}
+         				else
+         				{
+         					getBtnVal[i].style.display = "none";
+         					getHrVal[i].style.display = "none";
+         				}
+         			}
+         		mainDiv = document.getElementById("searchitKod");
+         		getBtnVal = mainDiv.getElementsByTagName("input");
+         		getHrVal = mainDiv.getElementsByTagName("hr");
+         		for (i = 0; i < getBtnVal.length; i++) 
+         		{
+         			bigBtnVal = getBtnVal[i].value.toUpperCase();
+         			if (bigBtnVal.indexOf(bigValue) > -1) 
+         			{
+         				getBtnVal[i].style.display = "block";
+         				getHrVal[i].style.display = "block";
+         			}
+         			else
+         			{
+         				getBtnVal[i].style.display = "none";
+         				getHrVal[i].style.display = "none";
+         			}
+         		}
+         	}
+         	function WinOpen_wlodarczyk()
+         		{
+         		window.open("obraz.html","okienko","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_1()
+         		{
+         		window.open("obrazy.html","okienka","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_3()
+         		{
+         		window.open("teoriazad3.html","zad 3","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_4()
+         		{
+         		window.open("zad4.html","zad 4","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_5()
+         		{
+         		window.open("zad5.html","zad 5","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_6()
+         		{
+         		window.open("zad6.html","zad 6","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_7()
+         		{
+         		window.open("zad7.html","zad 7","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_8()
+         		{
+         		window.open("zad8.html","zad 8","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_8kod()
+         		{
+         		window.open("zad8kod.html","zad 8 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_9()
+         		{
+         		window.open("zad9.html","zad 9","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_9kod()
+         		{
+         		window.open("zad9kod.html","zad 9- kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_10()
+         		{
+         		window.open("zad10.html","zad 10","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_10kod()
+         		{
+         		window.open("zad10kod.html","zad 10 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_11()
+         		{
+         		window.open("zad11.html","zad 11","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_11kod()
+         		{
+         		window.open("zad11kod.html","zad 11 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_12()
+         		{
+         		window.open("zad12.html","zad 12","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_12kod()
+         		{
+         		window.open("zad12kod.html","zad 12 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_13()
+         		{
+         		window.open("zad13.html","zad 13","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_13kod()
+         		{
+         		window.open("zad13kod.html","zad 13 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_14()
+         		{
+         		window.open("zad14.html","zad 14","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_14kod()
+         		{
+         		window.open("zad14kod.html","zad 14 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_15()
+         		{
+         		window.open("zad15.html","zad 15","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_15kod()
+         		{
+         		window.open("zad15kod.html","zad 15 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_16()
+         		{
+         		window.open("zad16.html","zad 16","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_17()
+         		{
+         		window.open("zad17.html","zad 17","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_17kod()
+         		{
+         		window.open("zad17kod.html","zad 17 - kod","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+         	function WinOpen_wlodarczyk_18()
+         		{
+         		window.open("zad18.html","zad 18","toolbar=no","directories=no","menubar=no","height=280","width=160","top=200","left=200");
+         		}
+      </script>
+      <style>
+         body
          {
          font-family: sans-serif;
          text-align: center;
-		 margin: 0;
-		 padding: 0;
+         margin: 0;
+         padding: 0;
          }
-		 .zadania
-		 {
-		  float:left;
-		  margin-left: 400px;
-		 }
-		 .kody
-		 {
-		 float: right;
-		 margin-right: 420px;
-		 }
+         .zadania
+         {
+         float:left;
+         margin-left: 400px;
+         }
+         .kody
+         {
+         float: right;
+         margin-right: 420px;
+         }
          .zadania hr
          {
          width: 300px; 
          border: 0;
          margin-bottom: 42px; 
-		 margin-top: 42px; 
+         margin-top: 42px; 
          box-shadow: 0 0 10px 1px #00e8d7;
-		 
          }
-		 .kody hr
+         .kody hr
          {
          width: 300px; 
          border: 0;
          margin-bottom: 42px; 
-		 margin-top: 42px; 
+         margin-top: 42px; 
          box-shadow: 0 0 10px 1px #eb8d00;
          }
          .text p{
@@ -244,50 +232,45 @@ function sleep(ms) {
          0 0 20px #fff, 
          0 0 40px #fff;
          }
-		 
-		 #text-zad p
-		 {
-		 margin-left: auto;
+         #text-zad p
+         {
+         margin-left: auto;
          margin-right: auto;
-		 color: #484848;
-		 font-size: 50px;
+         color: #484848;
+         font-size: 50px;
          font-weight: bold;
          font-family: monospace;
-		 text-align: center;
-		 letter-spacing: 7px;
+         text-align: center;
+         letter-spacing: 7px;
          transition: 0.5s;
-		 }
-		 
-		 #text-zad p:hover
-		 {
-		 color: #3bb8af;
+         }
+         #text-zad p:hover
+         {
+         color: #3bb8af;
          text-shadow: 0 0 10px orange,
          0 0 20px orange, 
          0 0 40px orange;
-		 }
-		 
-		  #text-kod p
-		 {
+         }
+         #text-kod p
+         {
          margin-left: auto;
          margin-right: auto;
-		 color: #484848;
-		 font-size: 50px;
+         color: #484848;
+         font-size: 50px;
          font-weight: bold;
          font-family: monospace;
-		 text-align: center;
-		 letter-spacing: 7px;
+         text-align: center;
+         letter-spacing: 7px;
          transition: 0.5s;
-		 width:100px
-		 }
-		 
-		 #text-kod p:hover
-		 {
-		 color: orange;
+         width:100px
+         }
+         #text-kod p:hover
+         {
+         color: orange;
          text-shadow: 0 0 10px #3bb8af,
          0 0 20px #3bb8af, 
          0 0 40px #3bb8af;
-		 }
-		 
+         }
          .zadania input[type="button"]
          {
          background: none;
@@ -314,9 +297,8 @@ function sleep(ms) {
          color: #13d4c5;
          font-size:28px;
          cursor: pointer;
-		 }
-		 
-		 .kody input[type="button"]
+         }
+         .kody input[type="button"]
          {
          background: none;
          display: block;
@@ -343,174 +325,172 @@ function sleep(ms) {
          font-size:28px;
          cursor: pointer;
          }
-		 .search-box
-		 {
-		 position:absolute;
-		 top: 50%;
-		 left: 50%;
-		 transform: translate(-50%,-50%);
-		 height: 40px;
-		 border-radius: 40px;
-		 padding: 10px;
-		 transition: 0.4s;
-		 border: 2px solid orange;
-		 }
-		 .search-box:hover > .search-txt
-		 {
-		 width: 240px;
-		 padding: 0 6px;
-		 }
-
-		 .search-box:hover > .search-btn
-		 {
-		 color: cyan;
-		 border: 2px solid orange;
-		 transform: rotate(360deg);
-		 }
-		 .search-box:hover
-		 {
-		 border: 2px solid cyan;
-		 }
-		 .search-btn
-		 {
-		 color: #e84118;
-		 float: right;
-		 width: 36px;
-		 height: 36px;
-		 border-radius: 50%;
-		 display: flex;
-		 justify-content: center;
-		 align-items: center;
-		 transition: 0.4s;
-		 text-decoration: none;
-		 border: 2px solid cyan;
-		 }
-		 .search-txt
-		 {
-		 border: none;
-		 background: none;
-		 outline: none;
-		 float: left;
-		 padding: 0;
-		 color: orange;
-		 font-size: 16px;
-		 transition: 0.4s;
-		 line-height: 40px;
-		 width: 0px;
-		 font-family: Calibri;
-		 font-weight: bold;
-		 }
-html {
-  background:url(https://cdnb.artstation.com/p/assets/images/images/014/665/033/original/yargon-kerman-webp-net-gifmaker-39.gif?1544919451);
-  background-color: rgba(0, 0, 0, 0.95);
-  background-size: 1890px 1080px;
-  background-blend-mode: multiply;
-  background-attachment: fixed;
- 
-}
-::placeholder { 
-  color: darkviolet;
-  opacity: 0.7;
-}
-
-#timeDiv
-{
-	position:absolute;
-	top: 75%;
-	position: fixed;
-	left: 39%;
-	padding: 10px;
-	color: transparent;
-	font-size: 80px;
-	font-family:Courier New;
-	transition: transform 30s ease-in-out;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #11C9CF;
--webkit-text-stroke-color:  -webkit-radial-gradient(circle farthest-corner at center center, #11C9CF 0%, #63FF6E 37%, #3000CF 100%);
--webkit-text-stroke-color:  -moz-radial-gradient(circle farthest-corner at center center, #11C9CF 0%, #63FF6E 37%, #3000CF 100%);
--webkit-text-stroke-color:  radial-gradient(circle farthest-corner at center center, #11C9CF 0%, #63FF6E 37%, #3000CF 100%);
-}
-#timeDiv:hover {
-  transform: rotate(36000deg);
-}
-		</style>
-	</head>
-	<body onload="startTime()">
-	<div class="text">
-	<p>Tomasz Włodarczyk<br>2P</p>
-	</div>
-	<div class="zadania" id="searchit">
-	<div id="text-zad">
-	<p>Zadania</p><br><br>
-	</div>
-	<input type="button" name="Przykład 1a" value="Przykład 1a" onclick="WinOpen_wlodarczyk(' ')">
-	<hr>
-    <input type="button" name="Zadanie 2" value="Zadanie 2" onclick="WinOpen_wlodarczyk_1(' ')">
-	<hr>
-    <input type="button" name="Zadanie 3" value="Zadanie 3" onclick="WinOpen_wlodarczyk_3(' ')">
-	<hr>
-    <input type="button" name="Zadanie 4" value="Zadanie 4"onclick="WinOpen_wlodarczyk_4(' ')">
-	<hr>
-    <input type="button" name="Zadanie 5" value="Zadanie 5" onclick="WinOpen_wlodarczyk_5(' ')">
-	<hr>
-	<input type="button" name="Zadanie 6" value="Zadanie 6" onclick="WinOpen_wlodarczyk_6(' ')">
-	<hr>
-	<input type="button" name="Zadanie 7" value="Zadanie 7" onclick="WinOpen_wlodarczyk_7(' ')">
-	<hr>
-	<input type="button" name="Zadanie 8" value="Zadanie 8" onclick="WinOpen_wlodarczyk_8(' ')">
-	<hr>
-	<input type="button" name="Zadanie 9" value="Zadanie 9" onclick="WinOpen_wlodarczyk_9(' ')">
-	<hr>
-	<input type="button" name="Zadanie 10" value="Zadanie 10" onclick="WinOpen_wlodarczyk_10(' ')">
-	<hr>
-	<input type="button" name="Zadanie 11" value="Zadanie 11" onclick="WinOpen_wlodarczyk_11(' ')">
-	<hr>
-	<input type="button" name="Zadanie 12" value="Zadanie 12" onclick="WinOpen_wlodarczyk_12(' ')">
-	<hr>
-	<input type="button" name="Zadanie 13" value="Zadanie 13" onclick="WinOpen_wlodarczyk_13(' ')">
-	<hr>
-	<input type="button" name="Zadanie 14" value="Zadanie 14" onclick="WinOpen_wlodarczyk_14(' ')">
-	<hr>
-	<input type="button" name="Zadanie 15" value="Zadanie 15" onclick="WinOpen_wlodarczyk_15(' ')">
-	<hr>
-	<input type="button" name="Zadanie 16" value="Zadanie 16" onclick="WinOpen_wlodarczyk_16(' ')">
-	<hr>
-	<input type="button" name="Zadanie 17" value="Zadanie 17" onclick="WinOpen_wlodarczyk_17(' ')">
-	<hr>
-	<input type="button" name="Zadanie 18" value="Zadanie 18" onclick="WinOpen_wlodarczyk_18(' ')">
-	<hr>
-	</div>
-	<div class="search-box">
-	<input id="searchtxt" class="search-txt" type="text" name="" onkeyup="hideButtonSearch()" onfocusout="this.value = '';" placeholder=" Wyszukaj zadania">
-	<a class="search-btn" href="#">
-	<i class="fas fa-search"></i>
-	</a>
-	</div>
-	<div id="timeDiv">
-
-	</div>
-	<div class="kody" id="searchitKod">
-	<div id="text-kod">
-	<p>Kod</p><br><br>
-	</div>
-	<input type="button" name="Zadanie 8 - kod" value="Zadanie 8 - kod" onclick="WinOpen_wlodarczyk_8kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 9 - kod" value="Zadanie 9 - kod" onclick="WinOpen_wlodarczyk_9kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 10 - kod" value="Zadanie 10 - kod" onclick="WinOpen_wlodarczyk_10kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 11 - kod" value="Zadanie 11 - kod" onclick="WinOpen_wlodarczyk_11kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 12 - kod" value="Zadanie 12 - kod" onclick="WinOpen_wlodarczyk_12kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 13 - kod" value="Zadanie 13 - kod" onclick="WinOpen_wlodarczyk_13kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 14 - kod" value="Zadanie 14 - kod" onclick="WinOpen_wlodarczyk_14kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 15 - kod" value="Zadanie 15 - kod" onclick="WinOpen_wlodarczyk_15kod(' ')">
-	<hr>
-	<input type="button" name="Zadanie 17 - kod" value="Zadanie 17 - kod" onclick="WinOpen_wlodarczyk_17kod(' ')">
-	<hr>
-	<div>
-	</body>
+         .search-box
+         {
+         position:absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         height: 40px;
+         border-radius: 40px;
+         padding: 10px;
+         transition: 0.4s;
+         border: 2px solid orange;
+         }
+         .search-box:hover > .search-txt
+         {
+         width: 240px;
+         padding: 0 6px;
+         }
+         .search-box:hover > .search-btn
+         {
+         color: cyan;
+         border: 2px solid orange;
+         transform: rotate(360deg);
+         }
+         .search-box:hover
+         {
+         border: 2px solid cyan;
+         }
+         .search-btn
+         {
+         color: #e84118;
+         float: right;
+         width: 36px;
+         height: 36px;
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: 0.4s;
+         text-decoration: none;
+         border: 2px solid cyan;
+         }
+         .search-txt
+         {
+         border: none;
+         background: none;
+         outline: none;
+         float: left;
+         padding: 0;
+         color: orange;
+         font-size: 16px;
+         transition: 0.4s;
+         line-height: 40px;
+         width: 0px;
+         font-family: Calibri;
+         font-weight: bold;
+         }
+         html {
+         background:url(https://cdnb.artstation.com/p/assets/images/images/014/665/033/original/yargon-kerman-webp-net-gifmaker-39.gif?1544919451);
+         background-color: rgba(0, 0, 0, 0.95);
+         background-size: 1890px 1080px;
+         background-blend-mode: multiply;
+         background-attachment: fixed;
+         }
+         ::placeholder { 
+         color: darkviolet;
+         opacity: 0.7;
+         }
+         #timeDiv
+         {
+         position:absolute;
+         top: 75%;
+         position: fixed;
+         left: 39%;
+         padding: 10px;
+         color: transparent;
+         font-size: 80px;
+         font-family:Courier New;
+         transition: transform 30s ease-in-out;
+         -webkit-text-stroke-width: 1px;
+         -webkit-text-stroke-color: #11C9CF;
+         -webkit-text-stroke-color:  -webkit-radial-gradient(circle farthest-corner at center center, #11C9CF 0%, #63FF6E 37%, #3000CF 100%);
+         -webkit-text-stroke-color:  -moz-radial-gradient(circle farthest-corner at center center, #11C9CF 0%, #63FF6E 37%, #3000CF 100%);
+         -webkit-text-stroke-color:  radial-gradient(circle farthest-corner at center center, #11C9CF 0%, #63FF6E 37%, #3000CF 100%);
+         }
+         #timeDiv:hover {
+         transform: rotate(36000deg);
+         }
+      </style>
+   </head>
+   <body onload="startTime()">
+      <div class="text">
+         <p>Tomasz Włodarczyk<br>2P</p>
+      </div>
+      <div class="zadania" id="searchit">
+         <div id="text-zad">
+            <p>Zadania</p>
+            <br><br>
+         </div>
+         <input type="button" name="Przykład 1a" value="Przykład 1a" onclick="WinOpen_wlodarczyk(' ')">
+         <hr>
+         <input type="button" name="Zadanie 2" value="Zadanie 2" onclick="WinOpen_wlodarczyk_1(' ')">
+         <hr>
+         <input type="button" name="Zadanie 3" value="Zadanie 3" onclick="WinOpen_wlodarczyk_3(' ')">
+         <hr>
+         <input type="button" name="Zadanie 4" value="Zadanie 4"onclick="WinOpen_wlodarczyk_4(' ')">
+         <hr>
+         <input type="button" name="Zadanie 5" value="Zadanie 5" onclick="WinOpen_wlodarczyk_5(' ')">
+         <hr>
+         <input type="button" name="Zadanie 6" value="Zadanie 6" onclick="WinOpen_wlodarczyk_6(' ')">
+         <hr>
+         <input type="button" name="Zadanie 7" value="Zadanie 7" onclick="WinOpen_wlodarczyk_7(' ')">
+         <hr>
+         <input type="button" name="Zadanie 8" value="Zadanie 8" onclick="WinOpen_wlodarczyk_8(' ')">
+         <hr>
+         <input type="button" name="Zadanie 9" value="Zadanie 9" onclick="WinOpen_wlodarczyk_9(' ')">
+         <hr>
+         <input type="button" name="Zadanie 10" value="Zadanie 10" onclick="WinOpen_wlodarczyk_10(' ')">
+         <hr>
+         <input type="button" name="Zadanie 11" value="Zadanie 11" onclick="WinOpen_wlodarczyk_11(' ')">
+         <hr>
+         <input type="button" name="Zadanie 12" value="Zadanie 12" onclick="WinOpen_wlodarczyk_12(' ')">
+         <hr>
+         <input type="button" name="Zadanie 13" value="Zadanie 13" onclick="WinOpen_wlodarczyk_13(' ')">
+         <hr>
+         <input type="button" name="Zadanie 14" value="Zadanie 14" onclick="WinOpen_wlodarczyk_14(' ')">
+         <hr>
+         <input type="button" name="Zadanie 15" value="Zadanie 15" onclick="WinOpen_wlodarczyk_15(' ')">
+         <hr>
+         <input type="button" name="Zadanie 16" value="Zadanie 16" onclick="WinOpen_wlodarczyk_16(' ')">
+         <hr>
+         <input type="button" name="Zadanie 17" value="Zadanie 17" onclick="WinOpen_wlodarczyk_17(' ')">
+         <hr>
+         <input type="button" name="Zadanie 18" value="Zadanie 18" onclick="WinOpen_wlodarczyk_18(' ')">
+         <hr>
+      </div>
+      <div class="search-box">
+         <input id="searchtxt" class="search-txt" type="text" name="" onkeyup="hideButtonSearch()" onfocusout="this.value = '';" placeholder=" Wyszukaj zadania">
+         <a class="search-btn" href="#">
+         <i class="fas fa-search"></i>
+         </a>
+      </div>
+      <div id="timeDiv">
+      </div>
+      <div class="kody" id="searchitKod">
+      <div id="text-kod">
+         <p>Kod</p>
+         <br><br>
+      </div>
+      <input type="button" name="Zadanie 8 - kod" value="Zadanie 8 - kod" onclick="WinOpen_wlodarczyk_8kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 9 - kod" value="Zadanie 9 - kod" onclick="WinOpen_wlodarczyk_9kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 10 - kod" value="Zadanie 10 - kod" onclick="WinOpen_wlodarczyk_10kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 11 - kod" value="Zadanie 11 - kod" onclick="WinOpen_wlodarczyk_11kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 12 - kod" value="Zadanie 12 - kod" onclick="WinOpen_wlodarczyk_12kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 13 - kod" value="Zadanie 13 - kod" onclick="WinOpen_wlodarczyk_13kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 14 - kod" value="Zadanie 14 - kod" onclick="WinOpen_wlodarczyk_14kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 15 - kod" value="Zadanie 15 - kod" onclick="WinOpen_wlodarczyk_15kod(' ')">
+      <hr>
+      <input type="button" name="Zadanie 17 - kod" value="Zadanie 17 - kod" onclick="WinOpen_wlodarczyk_17kod(' ')">
+      <hr>
+      <div>
+   </body>
 </html>
