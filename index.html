@@ -1,7 +1,6 @@
 <html id="body">
    <head>
       <title>Interwencja</title>
-      <script src="https://kit.fontawesome.com/695bd2b40a.js" crossorigin="anonymous"></script>
       <script language="JavaScript">
          var searchboxValue, bigValue, mainDiv,mainDivKod, getBtnVal, i, j;
          function startTime() {
@@ -344,9 +343,15 @@
          }
          .search-box:hover > .search-btn
          {
+		 filter: invert(100%) sepia(66%) saturate(7500%) hue-rotate(104deg) brightness(99%) contrast(104%);
          color: cyan;
          border: 2px solid orange;
          transform: rotate(360deg);
+		 float: right;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-decoration: none;
          }
          .search-box:hover
          {
@@ -412,6 +417,18 @@
          #timeDiv:hover {
          transform: rotate(36000deg);
          }
+		 .fasfa-search
+		 {
+		 filter: invert(27%) sepia(93%) saturate(2009%) hue-rotate(354deg) brightness(95%) contrast(91%);
+         float: right;
+         width: 25px;
+         height: 22px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: 0.4s;
+         text-decoration: none;
+		 }
       </style>
    </head>
    <body onload="startTime()">
@@ -463,7 +480,7 @@
       <div class="search-box">
          <input id="searchtxt" class="search-txt" type="text" name="" onkeyup="hideButtonSearch()" onfocusout="this.value = '';" placeholder=" Wyszukaj zadania">
          <a class="search-btn" href="#">
-         <i class="fas fa-search"></i>
+         <img class="fasfa-search" src="lupa.png"></img>
          </a>
       </div>
       <div id="timeDiv">
