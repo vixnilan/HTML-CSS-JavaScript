@@ -11,9 +11,9 @@
          m = checkTime(m);
          s = checkTime(s);
          if(h < 10)
-	   document.getElementById('timeDiv').innerHTML = "0" + h + ":" + m + ":" + s;
-	 else
-	   document.getElementById('timeDiv').innerHTML = h + ":" + m + ":" + s;
+         document.getElementById('timeDiv').innerHTML = "0" + h + ":" + m + ":" + s;
+         else
+         document.getElementById('timeDiv').innerHTML = h + ":" + m + ":" + s;
          var doc = document.getElementById("body");
          if( h == 21 && m == 37){
          doc.style.backgroundImage="url(https://preview.redd.it/1cekwu1nn6761.png?width=960&crop=smart&auto=webp&s=81b30f4b0ca52cfe69d3b50d2290358496762185)";
@@ -37,11 +37,11 @@
          	{
          		searchboxValue = document.getElementById("searchtxt");
          		bigValue = searchboxValue.value.toUpperCase();
-				if(bigValue == "AMOGUS") // nie polecam
-				{
-				let audio = new Audio('https://www.myinstants.com/media/sounds/guy-yelling-among-us.mp3');
-				audio.play();
-				}
+         if(bigValue == "AMOGUS") // nie polecam
+         {
+         let audio = new Audio('https://www.myinstants.com/media/sounds/guy-yelling-among-us.mp3');
+         audio.play();
+         }
          		mainDiv = document.getElementById("searchit");
          		getBtnVal = mainDiv.getElementsByTagName("input");
          		getHrVal = mainDiv.getElementsByTagName("hr");
@@ -351,11 +351,11 @@
          }
          .search-box:hover > .search-btn
          {
-		 filter: invert(100%) sepia(66%) saturate(7500%) hue-rotate(104deg) brightness(99%) contrast(104%);
+         filter: invert(100%) sepia(66%) saturate(7500%) hue-rotate(104deg) brightness(99%) contrast(104%);
          color: cyan;
          border: 2px solid orange;
          transform: rotate(360deg);
-		 float: right;
+         float: right;
          display: flex;
          justify-content: center;
          align-items: center;
@@ -405,12 +405,12 @@
          color: darkviolet;
          opacity: 0.7;
          }
-		 #timeDivPlacement
-		 {
+         #timeDivPlacement
+         {
          position: fixed;
          top: 80%; right: 50%;
-		 transform: translate(50%,-50%);
-		 }
+         transform: translate(50%,-50%);
+         }
          #timeDiv
          {
          color: transparent;
@@ -426,9 +426,9 @@
          #timeDiv:hover {
          transform: rotate(36000deg);
          }
-		 .search_ico
-		 {
-		 filter: invert(27%) sepia(93%) saturate(2009%) hue-rotate(354deg) brightness(95%) contrast(91%);
+         .search_ico
+         {
+         filter: invert(27%) sepia(93%) saturate(2009%) hue-rotate(354deg) brightness(95%) contrast(91%);
          float: right;
          width: 20px;
          height: 18px;
@@ -437,24 +437,70 @@
          align-items: center;
          transition: 0.4s;
          text-decoration: none;
-		 }
-		 .versio
-		 {
-		 position:fixed;
+         }
+         .versio
+         {
+         position:fixed;
          bottom: 1%;
          left: 50%;
          transform: translate(-50%,-50%);
          height: 40px;
-		 color: darkgrey;
+         color: darkgrey;
          transition: 0.4s;
-		 cursor: default;
-		 font-size: 30px;
+         cursor: default;
+         font-size: 30px;
          font-family:Courier New;
-		 opacity: 0.2;
-		 }
+         opacity: 0.2;
+         }
+         #progressbar
+         {
+         position: fixed;
+         top: 0;
+         right: 0;
+         width: 10px;
+         height: 100%;
+         background: linear-gradient(to top, #008aff,#00ffe7);
+         animation: animate 5s linear infinite;
+         opacity: 0.8;
+         }
+         #progressbar1
+         {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 10px;
+         height: 100%;
+         background: linear-gradient(to top, #008aff,#00ffe7);
+         animation: animate 5s linear infinite;
+         opacity: 0.8;
+         }
+         #progressbar:before, #progressbar:after, #progressbar1:before, #progressbar1:after
+         {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(to top, #008aff,#00ffe7);
+         filter: blur(30px);
+         }
+         @keyframes animate
+         {
+         0%,100%
+         {
+         filter: hue-rotate(0deg);
+         }
+         100%
+         {
+         filter: hue-rotate(360deg);
+         }
+         }
       </style>
    </head>
    <body onload="startTime()">
+      <div id="progressbar"></div>
+      <div id="progressbar1"></div>
       <div class="text">
          <p>Tomasz Włodarczyk<br>2P</p>
       </div>
@@ -506,36 +552,36 @@
          <img class="search_ico" src="lupa.png"></img>
          </a>
       </div>
-	  <div id="timeDivPlacement">
-		<div id="timeDiv">	
-		</div>
-	  </div>
+      <div id="timeDivPlacement">
+         <div id="timeDiv">	
+         </div>
+      </div>
       <div class="kody" id="searchitKod">
-      <div id="text-kod">
-         <p>Kod</p>
-         <br><br>
+         <div id="text-kod">
+            <p>Kod</p>
+            <br><br>
+         </div>
+         <input type="button" name="Zadanie 8 - kod" value="Zadanie 8 - kod" onclick="WinOpen_wlodarczyk_8kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 9 - kod" value="Zadanie 9 - kod" onclick="WinOpen_wlodarczyk_9kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 10 - kod" value="Zadanie 10 - kod" onclick="WinOpen_wlodarczyk_10kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 11 - kod" value="Zadanie 11 - kod" onclick="WinOpen_wlodarczyk_11kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 12 - kod" value="Zadanie 12 - kod" onclick="WinOpen_wlodarczyk_12kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 13 - kod" value="Zadanie 13 - kod" onclick="WinOpen_wlodarczyk_13kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 14 - kod" value="Zadanie 14 - kod" onclick="WinOpen_wlodarczyk_14kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 15 - kod" value="Zadanie 15 - kod" onclick="WinOpen_wlodarczyk_15kod(' ')">
+         <hr>
+         <input type="button" name="Zadanie 17 - kod" value="Zadanie 17 - kod" onclick="WinOpen_wlodarczyk_17kod(' ')">
+         <hr>
       </div>
-      <input type="button" name="Zadanie 8 - kod" value="Zadanie 8 - kod" onclick="WinOpen_wlodarczyk_8kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 9 - kod" value="Zadanie 9 - kod" onclick="WinOpen_wlodarczyk_9kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 10 - kod" value="Zadanie 10 - kod" onclick="WinOpen_wlodarczyk_10kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 11 - kod" value="Zadanie 11 - kod" onclick="WinOpen_wlodarczyk_11kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 12 - kod" value="Zadanie 12 - kod" onclick="WinOpen_wlodarczyk_12kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 13 - kod" value="Zadanie 13 - kod" onclick="WinOpen_wlodarczyk_13kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 14 - kod" value="Zadanie 14 - kod" onclick="WinOpen_wlodarczyk_14kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 15 - kod" value="Zadanie 15 - kod" onclick="WinOpen_wlodarczyk_15kod(' ')">
-      <hr>
-      <input type="button" name="Zadanie 17 - kod" value="Zadanie 17 - kod" onclick="WinOpen_wlodarczyk_17kod(' ')">
-      <hr>
+      <div class="versio">
+         <p> v 2.03 </p>
       </div>
-	  <div class="versio">
-		<p> v 2.03 </p>
-	  </div>
    </body>
 </html>
