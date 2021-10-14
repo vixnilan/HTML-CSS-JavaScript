@@ -22,7 +22,7 @@
          else
          {
          doc.style.backgroundImage="url(https://cdnb.artstation.com/p/assets/images/images/014/665/033/original/yargon-kerman-webp-net-gifmaker-39.gif?1544919451)";
-           doc.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+           doc.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
          }
          setTimeout(startTime, 1000);
          }
@@ -37,6 +37,11 @@
          	{
          		searchboxValue = document.getElementById("searchtxt");
          		bigValue = searchboxValue.value.toUpperCase();
+				if(bigValue == "AMOGUS") // nie polecam
+				{
+				let audio = new Audio('https://www.myinstants.com/media/sounds/guy-yelling-among-us.mp3');
+				audio.play();
+				}
          		mainDiv = document.getElementById("searchit");
          		getBtnVal = mainDiv.getElementsByTagName("input");
          		getHrVal = mainDiv.getElementsByTagName("hr");
@@ -391,7 +396,7 @@
          }
          html {
          background:url(https://cdnb.artstation.com/p/assets/images/images/014/665/033/original/yargon-kerman-webp-net-gifmaker-39.gif?1544919451);
-         background-color: rgba(0, 0, 0, 0.85);
+         background-color: rgba(0, 0, 0, 0.9);
          background-size: 1890px 1080px;
          background-blend-mode: multiply;
          background-attachment: fixed;
@@ -400,13 +405,14 @@
          color: darkviolet;
          opacity: 0.7;
          }
+		 #timeDivPlacement
+		 {
+         position: fixed;
+         top: 80%; right: 50%;
+		 transform: translate(50%,-50%);
+		 }
          #timeDiv
          {
-         position:absolute;
-         top: 75%;
-         position: fixed;
-         left: 38%;
-         padding: 10px;
          color: transparent;
          font-size: 80px;
          font-family:Courier New;
@@ -420,7 +426,7 @@
          #timeDiv:hover {
          transform: rotate(36000deg);
          }
-		 .fasfa-search
+		 .search_ico
 		 {
 		 filter: invert(27%) sepia(93%) saturate(2009%) hue-rotate(354deg) brightness(95%) contrast(91%);
          float: right;
@@ -431,6 +437,20 @@
          align-items: center;
          transition: 0.4s;
          text-decoration: none;
+		 }
+		 .versio
+		 {
+		 position:fixed;
+         bottom: 1%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         height: 40px;
+		 color: darkgrey;
+         transition: 0.4s;
+		 cursor: default;
+		 font-size: 30px;
+         font-family:Courier New;
+		 opacity: 0.2;
 		 }
       </style>
    </head>
@@ -483,11 +503,13 @@
       <div class="search-box">
          <input id="searchtxt" class="search-txt" type="text" name="" onkeyup="hideButtonSearch()" onfocusout="this.value = '';" placeholder=" Wyszukaj zadania">
          <a class="search-btn" href="#">
-         <img class="fasfa-search" src="lupa.png"></img>
+         <img class="search_ico" src="lupa.png"></img>
          </a>
       </div>
-      <div id="timeDiv">
-      </div>
+	  <div id="timeDivPlacement">
+		<div id="timeDiv">	
+		</div>
+	  </div>
       <div class="kody" id="searchitKod">
       <div id="text-kod">
          <p>Kod</p>
@@ -511,6 +533,9 @@
       <hr>
       <input type="button" name="Zadanie 17 - kod" value="Zadanie 17 - kod" onclick="WinOpen_wlodarczyk_17kod(' ')">
       <hr>
-      <div>
+      </div>
+	  <div class="versio">
+		<p> v 2.03 </p>
+	  </div>
    </body>
 </html>
