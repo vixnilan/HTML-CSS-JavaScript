@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>
+Chlopy i samolot
+</title>
+<script language="JavaScript">
+
+function wysokosc_wlodarczyk(a_wlod,b_wlod)
+{
+a_wlod=parseFloat(a_wlod);
+b_wlod=parseFloat(b_wlod);
+
+wynik = Math.sqrt(b_wlod * b_wlod - a_wlod * a_wlod );
+document.getElementsByName('wysokosc')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_wys_wlod.innerHTML="Wysokosc="+wynik.toFixed(2)+" m"+"<br>"; /* do tabeli */
+}
+
+
+function alfa_wlodarczyk(a_wlod,b_wlod)
+{
+a_wlod=parseFloat(a_wlod);
+b_wlod=parseFloat(b_wlod);
+
+rady = Math.asin(a_wlod / b_wlod);
+wynik = rady * (180/Math.PI);
+
+document.getElementsByName('alfa')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_alfe_wlod.innerHTML="Stopnie="+wynik.toFixed(2)+" °"+"<br>"; /* do tabeli */
+}
+
+</script>
+</head>
+<body>
+<form name="formularz" action="..." onsubmit="wysokosc_wlodarczyk(this.a_dana_wlod.value,this.b_dana_wlod.value); alfa_wlodarczyk(this.a_dana_wlod.value,this.b_dana_wlod.value);return false">
+Podaj odleglosc=
+<input size="6" name="a_dana_wlod">
+Podaj droge=
+<input size="6" name="b_dana_wlod">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Wysokosc =
+<input size="6" name="wysokosc">
+Kat startu=
+<input size="6" name="alfa">
+</form>
+<table>
+<tr id="wyprowadz_wys_wlod"></tr> 
+<tr id="wyprowadz_alfe_wlod"></tr> 
+</table>
+</body>
+</html>

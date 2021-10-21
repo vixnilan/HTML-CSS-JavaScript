@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>
+Drabina
+</title>
+<script language="JavaScript">
+
+function drabina_wlodarczyk(a_wlod,b_wlod)
+{
+a_wlod=parseFloat(a_wlod);
+b_wlod=parseFloat(b_wlod);
+
+wynik = Math.sqrt( a_wlod * a_wlod + b_wlod * b_wlod)
+document.getElementsByName('drabina')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_drabine_wlod.innerHTML="Drabina="+wynik.toFixed(2)+" m"+"<br>"; /* do tabeli */
+}
+
+
+function alfa_wlodarczyk(a_wlod,b_wlod)
+{
+a_wlod=parseFloat(a_wlod);
+b_wlod=parseFloat(b_wlod);
+
+rady = Math.atan2(a_wlod, b_wlod);
+wynik = rady * (180/Math.PI);
+
+document.getElementsByName('alfa')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_alfe_wlod.innerHTML="Stopnie="+wynik.toFixed(2)+" °"+"<br>"; /* do tabeli */
+}
+
+</script>
+</head>
+<body>
+<form name="formularz" action="..." onsubmit="drabina_wlodarczyk(this.a_dana_wlod.value,this.b_dana_wlod.value); alfa_wlodarczyk(this.a_dana_wlod.value,this.b_dana_wlod.value);return false">
+Podaj d=
+<input size="6" name="a_dana_wlod">
+Podaj x=
+<input size="6" name="b_dana_wlod">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Drabina=
+<input size="6" name="drabina">
+Alfa=
+<input size="6" name="alfa">
+</form>
+<table>
+<tr id="wyprowadz_drabine_wlod"></tr> 
+<tr id="wyprowadz_alfe_wlod"></tr> 
+</table>
+</body>
+</html>

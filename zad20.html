@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>
+Pola trapezu B)
+</title>
+<script language="JavaScript">
+
+function Pole_wlodarczyk(a_wlod,b_wlod,h_wlod)
+{
+a_wlod=parseFloat(Math.abs(a_wlod));
+b_wlod=parseFloat(Math.abs(b_wlod));
+h_wlod=parseFloat(Math.abs(h_wlod));
+
+wynik = ((a_wlod + b_wlod) * h_wlod) / 2;
+document.getElementsByName('pole')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_pole_wlod.innerHTML="Pole="+wynik.toFixed(2)+" cm2"+"<br>"; /* do tabeli */
+}
+
+
+function obwod_wlodarczyk(a_wlod,b_wlod,h_wlod)
+{
+a_wlod=parseFloat(Math.abs(a_wlod));
+b_wlod=parseFloat(Math.abs(b_wlod));
+h_wlod=parseFloat(Math.abs(h_wlod));
+
+if (a_wlod <= b_wlod)
+	{
+		var x = (b_wlod - a_wlod) / 2;
+		var c = Math.sqrt(x * x + h_wlod * h_wlod);
+		wynik = a_wlod + b_wlod + (c * 2);
+	}
+	if (b_wlod <= a_wlod)
+	{
+		var x = (a_wlod - b_wlod) / 2;
+		var c = Math.sqrt(x * x + h_wlod * h_wlod);
+		wynik = a_wlod + b_wlod + (c * 2);
+	}
+
+document.getElementsByName('obw')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_obwod_wlod.innerHTML="Obwod="+wynik.toFixed(2)+" cm"+"<br>"; /* do tabeli */
+}
+
+</script>
+</head>
+<body>
+<form name="formularz" action="..." onsubmit="Pole_wlodarczyk(this.a_dana_wlod.value,this.b_dana_wlod.value,this.h_dana_wlod.value); obwod_wlodarczyk(this.a_dana_wlod.value,this.b_dana_wlod.value,this.h_dana_wlod.value);return false">
+Podaj a=
+<input size="6" name="a_dana_wlod">
+Podaj b=
+<input size="6" name="b_dana_wlod">
+Podaj h=
+<input size="6" name="h_dana_wlod">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Pole=
+<input size="6" name="pole">
+Obwod=
+<input size="6" name="obw">
+</form>
+<table>
+<tr id="wyprowadz_pole_wlod"></tr>
+<tr id="wyprowadz_obwod_wlod"></tr>
+</table>
+</body>
+</html>
