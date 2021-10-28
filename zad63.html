@@ -1,0 +1,29 @@
+﻿<html>
+<body>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function changeColor(a)
+{
+tekstVal = a.value.toLowerCase();
+if(tekstVal == "1" || tekstVal == "czerwony")
+	{
+	document.getElementById("wyprowadz_tekst_kolor").innerHTML = "wczytałeś kolor czerwony"+"<br>";
+	document.getElementById("wyprowadz_tekst_kolor").style.color = "red";
+	document.getElementById("wyprowadz_tekst_kolor").style.fontSize = "7mm";
+	}
+	if(tekstVal == "2" || tekstVal == "niebieski")
+	{
+	document.getElementById("wyprowadz_tekst_kolor").innerHTML = "wczytałeś kolor niebieski"+"<br>";
+	document.getElementById("wyprowadz_tekst_kolor").style.color = "blue";
+	document.getElementById("wyprowadz_tekst_kolor").style.fontSize = "1mm";
+	}
+}
+</script>
+<font style="color: green; font-size:40px;"> MENU: </font> <br>
+<font style="color: red; font-size:40px;"> 1 - Czerwony </font> <br>
+<font style="color: blue; font-size:40px;"> 2 - Niebieski </font> <br>
+<input size="6" name="kolorTekst" id="tekst"><br>
+<input type="button" value="Sprawdź" onclick=changeColor(document.getElementById("tekst"))> <br>
+<p id="wyprowadz_tekst_kolor"></p> 
+</body>
+</html>

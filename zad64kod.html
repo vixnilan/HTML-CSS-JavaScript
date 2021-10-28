@@ -1,0 +1,31 @@
+﻿<html>
+<body>
+<textarea rows="36" cols="110">
+<html>
+<body onload="evenNum()">
+<meta charset="UTF-8">
+<script language="JavaScript">
+function evenNum()
+{
+let Liczba = prompt("Podaj liczbe: ");
+tekstVal = Liczba.toLowerCase();
+if(tekstVal % 2 == 0)
+	{
+	document.getElementById("wyprowadz_tekst").innerHTML = "Liczba jest parzysta"+"<br>";
+	document.getElementById("wyprowadz_tekst").style.color = "red";
+	document.getElementById("wyprowadz_tekst").style.fontSize = "3mm";
+	}
+	else
+	{
+	document.getElementById("wyprowadz_tekst").innerHTML = "Liczba nie jest parzysta"+"<br>";
+	document.getElementById("wyprowadz_tekst").style.color = "silver";
+	document.getElementById("wyprowadz_tekst").style.fontSize = "5mm";
+	}
+}
+</script>
+<p id="wyprowadz_tekst"></p> 
+</body>
+</html>
+</textarea>
+</html>
+</body>
